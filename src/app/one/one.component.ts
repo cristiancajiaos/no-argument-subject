@@ -22,10 +22,15 @@ export class OneComponent implements OnInit, OnDestroy {
     });
   }
 
+  public cleanBools(): void {
+    this.bools = [];
+  }
+
   ngOnDestroy() {
     if (this.fourSubscription) {
       this.fourSubscription.unsubscribe();
     }
   }
+
 
 }
